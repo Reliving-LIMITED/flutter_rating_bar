@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 /// Defines widgets which are to used as rating bar items.
 class RatingWidget {
-  RatingWidget({
-    required this.full,
-    required this.half,
-    required this.empty,
-  });
+  RatingWidget(
+      {required this.full,
+      required this.half,
+      required this.empty,
+      this.itemSize});
 
   /// Defines widget to be used as rating bar item when the item is completely rated.
   final Widget full;
@@ -18,6 +18,9 @@ class RatingWidget {
 
   /// Defines widget to be used as rating bar item when the item is unrated.
   final Widget empty;
+
+  /// Defines widget to be used as rating bar item when the item is unrated.
+  final double? itemSize;
 }
 
 /// A widget to receive rating input from users.
